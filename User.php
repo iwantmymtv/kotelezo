@@ -3,6 +3,9 @@
 class User{
 
   private $id;
+  private $email;
+  private $name;
+  private $password;
 
   public function __construct($email, $name,$password){
     $this->email = $email;
@@ -12,7 +15,7 @@ class User{
   }
 
   public function saveUser(){
-    $file = fopen("users.txt", "a");
+    $file = fopen("data/users.txt", "a");
     $user = [
       "id" => $this->id,
       "email" => $this->email,
@@ -24,7 +27,7 @@ class User{
   }
   
   public static function getUsers(){
-    $file = fopen("users.txt", "r");
+    $file = fopen("data/users.txt", "r");
     $users = [];
     while (($line = fgets($file)) !== false) {
         $users[] = unserialize($line);
@@ -32,19 +35,26 @@ class User{
     fclose($file);
     return $users;
   }
-  public static function getSingleUser($id){
+  public static function getSingleUserById($id){
     $users = self::getUsers();
     foreach($users as $user){
       if ($user["id"] == $id){
         return $user;
       }
     }
-
+    return null;
+  }
+  public static function getSingleUserByEmail($email){
+    $users = self::getUsers();
+    foreach($users as $user){
+      if ($user["email"] == $email){
+        return $user;
+      }
+    }
     return null;
   }
 
 }
-
 
 
 
