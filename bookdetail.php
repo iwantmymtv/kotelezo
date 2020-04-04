@@ -1,5 +1,7 @@
 <?php 
 require('Book.php');
+require('User.php');
+
 if(isset($_GET['id'])){
   $book = Book::getSingleBookById($_GET['id']);
   $books = Book::getBooks();
@@ -17,12 +19,11 @@ if (!isset($_SESSION)){
 } 
 
 if (isset($_SESSION["user"])){
-  $favs = $_SESSION['user']['favorites'];
+  $user = User::getSingleUserById($_SESSION["user"]['id']);
+  $favs = $user['favorites'];
 } else{
   $favs = [];
 }
-
-
 
 ?>
 
@@ -61,7 +62,7 @@ include('templates/header.php');
           <?php if (isset($_SESSION["user"])) : ?>
            <!--  kedvencek közt van e mar -->
             <?php if (in_array($book['id'],$favs)): ?>
-              <a href="#" class="btn btn-green">Kedvenc</a>
+              <a href="favorites.php" class="btn btn-green">Kedvenced</a>
             <?php else : ?>
               <a href="addToFavs.php?id=<?php echo $book['id'] ?>" class="btn btn-green">Hozzáadás kedvencekhez</a>
             <?php endif; ?>

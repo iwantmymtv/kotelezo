@@ -6,12 +6,14 @@ class User{
   private $email;
   private $name;
   private $password;
+  private $favorites;
 
   public function __construct($email, $name,$password){
     $this->email = $email;
     $this->name = $name;
     $this->password = password_hash($password,PASSWORD_DEFAULT);
     $this->id = uniqid();
+    $this->favorites = [];
   }
 
   public function saveUser(){
@@ -25,6 +27,7 @@ class User{
       "email" => $this->email,
       "password" => $this->password,
       "name" => $this->name,
+      "favorites" => $this->favorites, 
     ];
     array_push($users,$user);
     $file = fopen("data/users.json", "w");

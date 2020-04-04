@@ -8,6 +8,7 @@ class Book{
   private $description;
   private $pages;
   private $imgUrl;
+  private $favedBy;
 
   public function __construct($name,$author,$description,$pages,$imgUrl){
     $this->id = uniqid();
@@ -16,12 +17,18 @@ class Book{
     $this->description = $description;
     $this->pages = $pages;
     $this->imgUrl = $imgUrl;
+    $this->favedBy = [];
   }
 
   private static function writeFile($filename,$array){
     $file = fopen("data/".$filename, "w");
     fwrite($file, json_encode($array, JSON_PRETTY_PRINT));
     fclose($file); 
+  }
+  private static function readFile($filename){
+    $jsonString = file_get_contents('data/'.$filename);
+    $data = json_decode($jsonString, true);
+    return $data;
   }
 
   public function saveBook(){
@@ -37,13 +44,13 @@ class Book{
       "description" => $this->description, 
       "pages" => $this->pages,
       "imgUrl" => $this->imgUrl,
+      "favedBy" => $this->favedBy
     ];
     array_push($books,$book);
     self::writeFile("books.json",$books);
   }
   public static function getBooks(){
-    $jsonString = file_get_contents('data/books.json');
-    $books = json_decode($jsonString, true);
+    $books = self::readFile('books.json');
     return $books;
   }
   public static function getSingleBookById($id){
@@ -81,8 +88,7 @@ class Book{
     }
     self::writeFile("books.json",$books);
 
-    $jsonString = file_get_contents('data/users.json');
-    $users = json_decode($jsonString, true);
+    $users = self::readFile('users.json');
     foreach ($users as &$user) {
       if ($user['id'] == $userId) {
         if (!in_array($bookId, $user['favorites'])){
