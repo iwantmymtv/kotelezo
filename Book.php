@@ -48,6 +48,15 @@ class Book{
     }
     return null;
   }
+  public static function removeBook($id){
+    $books = self::getBooks();
+    foreach($books as $key=>$value){
+      if ($value['id'] == $id ){
+        $index = $key;
+      }
+    }
+    array_splice($books,$index,1);
+  }
 
 }
 

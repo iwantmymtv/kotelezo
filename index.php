@@ -4,7 +4,7 @@
   $title = "Könyvespolc";
   include('templates/header.php');
   require('Book.php');
-  $books = Book::getBooks();
+  $books = array_reverse(Book::getBooks());
 ?>
 <body>
  <?php include('templates/nav.php') ?>

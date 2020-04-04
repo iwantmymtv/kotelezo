@@ -61,7 +61,7 @@ include('templates/header.php');
           </div>
           
           <div class="text-center mt-2">
-            <button name="registration" type="submit" class="btn" >Regisztráció</button>
+            <button name="registration" type="submit"  >Regisztráció</button>
 
           </div>
         </form>

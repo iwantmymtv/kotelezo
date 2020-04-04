@@ -46,7 +46,7 @@ include('templates/header.php');
           </div>
           
           <div class="text-center mt-2">
-            <button type="submit" name="login" class="btn">Belépés</button>
+            <button type="submit" name="login">Belépés</button>
 
           </div>
         </form>
