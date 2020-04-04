@@ -209,9 +209,16 @@ footer {
 	height: 30rem;
 	overflow: hidden;
 }
+
 .other-books_link img{
 	height: 100%;
 	width:auto;
+}
+@media only screen and (max-width: 1024px) {
+	.other-books_link {
+		height: 20rem;
+		
+	}
 }
 
 .login {
@@ -228,7 +235,7 @@ footer {
   z-index: 99; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
+	width:100vw;/* Full width */
   height: 100%; /* Full height */
   overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
@@ -238,20 +245,23 @@ footer {
 /* Modal Content/Box */
 .modal-content {
   background-color: var(--color-third);
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 5% auto; /* 15% from the top and centered */
   padding: 2rem;
   border: 1px solid #888;
 	width: 80%; 
 	height: 30%;/* Could be more or less, depending on screen size */
 	position: relative;
 	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* The Close Button */
 .close {
 	color: var(--color-forth);
 	position: absolute;
-	right: 1rem;
+	right: 1rem; 
 	top:0.7rem;
   font-size: 28px;
   font-weight: bold;

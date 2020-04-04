@@ -15,24 +15,26 @@ class User{
   }
 
   public function saveUser(){
-    $file = fopen("data/users.txt", "a");
+    if (self::getUsers() !== null){
+      $users= self::getUsers();
+    }else{
+      $users = [];
+    }
     $user = [
       "id" => $this->id,
       "email" => $this->email,
       "password" => $this->password,
       "name" => $this->name,
     ];
-    fwrite($file,serialize($user)."\n");
+    array_push($users,$user);
+    $file = fopen("data/users.json", "w");
+    fwrite($file, json_encode($users, JSON_PRETTY_PRINT));
     fclose($file);
   }
   
   public static function getUsers(){
-    $file = fopen("data/users.txt", "r");
-    $users = [];
-    while (($line = fgets($file)) !== false) {
-        $users[] = unserialize($line);
-    }
-    fclose($file);
+    $jsonString = file_get_contents('data/users.json');
+    $users = json_decode($jsonString, true);
     return $users;
   }
   public static function getSingleUserById($id){

@@ -1,4 +1,0 @@
-a:4:{s:2:"id";s:13:"5e8738599f74b";s:5:"email";s:24:"cryptoearnings77@mail.hu";s:8:"password";s:60:"$2y$10$pvcEKWD1bZWifmuOzLj4DOu9/ulnRyiEwv3Wyuai5tYasmpatxbKi";s:4:"name";s:5:"Peter";}
-a:4:{s:2:"id";s:13:"5e8738ab4c154";s:5:"email";s:27:"cryptoearnings777@gmail.com";s:8:"password";s:60:"$2y$10$RgD8cxHe5jfI0rIKUqfonu3D8dNOSODxFInf99v4Pk0vbrwfSSD.u";s:4:"name";s:5:"Toth ";}
-a:4:{s:2:"id";s:13:"5e873ba28de7c";s:5:"email";s:24:"cryptoearnings@gmail.com";s:8:"password";s:60:"$2y$10$PiepS/X6K7lQ8SXmCQYMF.WmqZUgPYFmRDW/Ix1a.281hoAN.PMkm";s:4:"name";s:10:"Toth Peter";}a:4:{s:2:"id";s:13:"5e87511fc4731";s:5:"email";s:23:"cryptonings77@gmail.com";s:8:"password";s:60:"$2y$10$wQ9sFzUTnv7rw3XLzRbhfeY7vu1aJr20EA2sDdKRoyGZp3ofwMIVW";s:4:"name";s:10:"Toth Peter";}
-a:4:{s:2:"id";s:13:"5e87532dec8f9";s:5:"email";s:16:"crypto@gmail.com";s:8:"password";s:60:"$2y$10$dgxYm2/P4bGFNAPa5cjEGuC.zwucxE9mBQL07tULvsMPLTJ8e8.mm";s:4:"name";s:10:"Toth Peter";}
