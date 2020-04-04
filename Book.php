@@ -102,6 +102,8 @@ class Book{
 
   public static function removeFromFavorite($bookId,$userId){
     $users = self::readFile('users.json');
+    $books = self::readFile('books.json');
+
     foreach($users as &$u){
       if ($u['id'] == $userId){
         foreach($u['favorites'] as $key=>$value){
@@ -113,6 +115,18 @@ class Book{
       }
     }
     self::writeFile("users.json",$users);
+
+    foreach($books as &$u){
+      if ($u['id'] == $bookId){
+        foreach($u['favedBy'] as $key=>$value){
+          if ($value == $bookId){
+            $index = $key;
+          }
+        }
+        array_splice($u['favedBy'],$index,1);
+      }
+    }
+    self::writeFile("books.json",$books);
     
   } 
 

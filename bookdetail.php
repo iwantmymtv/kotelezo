@@ -55,7 +55,9 @@ include('templates/header.php');
           <?php echo $book['description']; ?>
           </p>
         </div>
-
+        <div class="text-center" style="font-style:italic;">
+        <p class="fontsize-1 mt-1 " ><?php echo  count($book['favedBy']); ?> ember kedvence</p>
+        </div>
         <div class="bookdetail_favourite text-center p-2">
           
           <!-- Ellenorzi hogy be vagy e jelentkezve -->
@@ -72,6 +74,7 @@ include('templates/header.php');
             <a href="login.php" class="btn btn-green">Hozzáadás kedvencekhez</a>  
           <?php endif; ?>
         </div>
+        
       </div>
 
         <?php if($otherbooks): ?>
