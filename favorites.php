@@ -37,7 +37,9 @@ include('templates/header.php');
           <div class="favorites-single_detail">
             <p class="fontsize-2" ><?php echo $f['name']; ?></p>
             <p class="fontsize-1"><?php echo $f['author']; ?></p>
-            <a class="btn btn-red mt-2"href="">Eltávolítás a kedvencekből</a>
+            <a class="btn btn-red mt-2" href="removeFromFav.php?id=<?php echo $f['id'] ?>">
+              Eltávolítás a kedvencekből
+             </a>
           </div>
         </div>
         <?php endforeach; ?>

@@ -62,9 +62,10 @@ class Book{
     }
     return null;
   }
-  public static function removeBook($id){
+  public static function removeBook($id,$userId){
     $books = self::getBooks();
     $book = self::getSingleBookById($id);
+    self::removeFromFavorite($book['id'],$userId);
     unlink($book['urlImg']);
     $index = 0;
     foreach($books as $key=>$value){
@@ -99,9 +100,21 @@ class Book{
     self::writeFile("users.json",$users);
   }
 
- /*  public static function removeFromFavorite($bookId,$userId){
-
-  } */
+  public static function removeFromFavorite($bookId,$userId){
+    $users = self::readFile('users.json');
+    foreach($users as &$u){
+      if ($u['id'] == $userId){
+        foreach($u['favorites'] as $key=>$value){
+          if ($value == $bookId){
+            $index = $key;
+          }
+        }
+        array_splice($u['favorites'],$index,1);
+      }
+    }
+    self::writeFile("users.json",$users);
+    
+  } 
 
 }
 

@@ -4,9 +4,11 @@ require('Book.php');
 
 if (!isset($_SESSION["user"])){
   header('Location: login.php');
-} 
+} else {
+  Book::removeBook($_GET['id'],$_SESSION["user"]['id']);
+  header('Location:index.php');
+}
 
-Book::removeBook($_GET['id']);
-header('Location:index.php');
+
 
 ?>
