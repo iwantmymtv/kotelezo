@@ -7,7 +7,6 @@
         "pages": "1114",
         "imgUrl": "img\/uploads\/4684547_5.jpg",
         "favedBy": [
-            "5e88b8bd00d33",
             "5e88bcbce5cd4"
         ]
     },
@@ -31,7 +30,8 @@
         "pages": "149",
         "imgUrl": "img\/uploads\/5901447_5.jpg",
         "favedBy": [
-            "5e88b8bd00d33"
+            "5e88b8bd00d33",
+            "5e899ed8cd609"
         ]
     },
     {
@@ -41,7 +41,11 @@
         "description": "Ortega hat\u00e1sa \u00e9s k\u00e9s\u0151bbi tilt\u00e1sa k\u00fcl\u00f6n\u00f6sen l\u00e1tv\u00e1nyos volt a t\u00f6megember fogalm\u00e1nak eset\u00e9ben: Ortega els\u0151sorban mor\u00e1lfiloz\u00f3fiai kateg\u00f3riak\u00e9nt hat\u00e1rozza meg ezt az embert\u00edpust, s azzal jellemzi, hogy az csak jogokat ismer, k\u00f6telezetts\u00e9get nem, r\u00e1ad\u00e1sul \"\u00f6ntelt \u00farfik\u00e9nt\" viselkedik, amikor gondtalan \u00e9let\u00e9t term\u00e9szetesnek veszi, saj\u00e1t mag\u00e1t pedig t\u00f6k\u00e9letesnek tartja. E felfog\u00e1s k\u00f6vetkezm\u00e9nyei katasztrof\u00e1lisak lesznek - j\u00f6vend\u00f6lte a spanyol filoz\u00f3fus. J\u00f3slatai sajnos helyt\u00e1ll\u00f3nak bizonyultak",
         "pages": "309",
         "imgUrl": "img\/uploads\/5770065_5.jpg",
-        "favedBy": []
+        "favedBy": [
+            "5e88b8bd00d33",
+            "5e88bcbce5cd4",
+            "5e899ed8cd609"
+        ]
     },
     {
         "id": "5e88e8395fab8",
@@ -51,7 +55,6 @@
         "pages": "464",
         "imgUrl": "img\/uploads\/2b28c7f296e0642ebc1ba05fecb2e2b0_big.jpg",
         "favedBy": [
-            "5e88b8bd00d33",
             "5e88bcbce5cd4"
         ]
     },
@@ -63,7 +66,9 @@
         "pages": "738",
         "imgUrl": "img\/uploads\/640038_5.jpg",
         "favedBy": [
-            "5e88bcbce5cd4"
+            "5e88b8bd00d33",
+            "5e88bcbce5cd4",
+            "5e899ed8cd609"
         ]
     }
 ]

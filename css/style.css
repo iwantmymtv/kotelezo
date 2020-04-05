@@ -96,6 +96,8 @@ footer {
 .nav-links li a {
 	text-transform: uppercase;
 	font-size: 1.4rem;
+}
+.nav-links li a:hover{
 	border-bottom: 2px solid var(--border-color);
 }
 

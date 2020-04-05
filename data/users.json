@@ -5,9 +5,10 @@
         "password": "$2y$10$M5g4ENIOKej6SxhTTY\/oiuVRCtWzbllvb3kSxgR5JMXNPK00O3XNy",
         "name": "Toth Peter",
         "favorites": [
-            "5e88820269565",
-            "5e88818b6fa61",
-            "5e88e8395fab8"
+            "5e88e892539f7",
+            "5e8881b7b423f",
+            "5e8882394ccb3",
+            "5e88820269565"
         ]
     },
     {
@@ -18,8 +19,20 @@
         "favorites": [
             "5e88e892539f7",
             "5e8881b7b423f",
-            "5e88818b6fa61",
-            "5e88e8395fab8"
+            "5e88e8395fab8",
+            "5e8882394ccb3",
+            "5e88818b6fa61"
+        ]
+    },
+    {
+        "id": "5e899ed8cd609",
+        "email": "jozsi@gmail.com",
+        "password": "$2y$10$smyGxtr5i1uyWX2nzpijD.QB37zS.NHRRqd4wnrN12wGohTjOJAGS",
+        "name": "Jozsef",
+        "favorites": [
+            "5e88820269565",
+            "5e88e892539f7",
+            "5e8882394ccb3"
         ]
     }
 ]

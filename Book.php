@@ -116,14 +116,14 @@ class Book{
     }
     self::writeFile("users.json",$users);
 
-    foreach($books as &$u){
-      if ($u['id'] == $bookId){
-        foreach($u['favedBy'] as $key=>$value){
-          if ($value == $bookId){
+    foreach($books as &$b){
+      if ($b['id'] == $bookId){
+        foreach($b['favedBy'] as $key=>$value){
+          if ($value == $userId){
             $index = $key;
           }
         }
-        array_splice($u['favedBy'],$index,1);
+        array_splice($b['favedBy'],$index,1);
       }
     }
     self::writeFile("books.json",$books);
